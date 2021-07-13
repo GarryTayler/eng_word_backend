@@ -22,7 +22,8 @@ class WordController {
                     id: item.id,
                     word: item.word,
                     meaning: item.meaning,
-                    ex: item.ex == null ? [] : item.ex
+                    ex: item.ex == null ? [] : item.ex,
+                    pronunciation: item.pronunciation
                 };
                 ret_data.push(ret_item);
             });

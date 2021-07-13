@@ -3,6 +3,7 @@ import { Trigger } from './entity-enum';
 import { Video } from './video';
 import { Word } from './word';
 import { Sentence } from './sentence';
+import { SentenceView } from './sentence-view';
 
 @Entity()
 export class Category {
@@ -48,5 +49,7 @@ export class Category {
 
     @OneToMany(_type => Sentence, sentence => sentence.category)
     sentences: Sentence[];
-    
+
+    @OneToMany(_type => SentenceView, sentenceView => sentenceView.category)
+    sentenceViews: SentenceView[];
 }
